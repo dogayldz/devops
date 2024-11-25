@@ -43,8 +43,6 @@ jobs:
       # 6. Adım: Docker imajını Docker Hub'a push etme (Opsiyonel)
       - name: Push Docker image to Docker Hub
         run: |
-          - name: Push Docker image to Docker Hub
-        run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker tag my-spring-boot-app:latest dogayldz/my-spring-boot-app:latest
           docker push dogayldz/my-spring-boot-app:latest
